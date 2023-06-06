@@ -1,50 +1,51 @@
-import java.util.ArrayList;
-import java.util.List;
-
-interface StringChecker { boolean checkString(String s); }
-
-class ListExamples {
-
-  // Returns a new list that has all the elements of the input list for which
-  // the StringChecker returns true, and not the elements that return false, in
-  // the same order they appeared in the input list;
-  static List<String> filter(List<String> list, StringChecker sc) {
-    List<String> result = new ArrayList<>();
-    for(String s: list) {
-      if(sc.checkString(s)) {
-        result.add(0, s);
-      }
-    }
-    return result;
-  }
-
-
-  // Takes two sorted list of strings (so "a" appears before "b" and so on),
-  // and return a new list that has all the strings in both list in sorted order.
-  static List<String> merge(List<String> list1, List<String> list2) {
-    List<String> result = new ArrayList<>();
-    int index1 = 0, index2 = 0;
-    while(index1 < list1.size() && index2 < list2.size()) {
-      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
-        result.add(list1.get(index1));
-        index1 += 1;
-      }
-      else {
-        result.add(list2.get(index2));
-        index2 += 1;
-      }
-    }
-    while(index1 < list1.size()) {
-      result.add(list1.get(index1));
-      index1 += 1;
-    }
-    while(index2 < list2.size()) {
-      result.add(list2.get(index2));
-      // change index1 below to index2 to fix test
-      index2 += 1;
-    }
-    return result;
-  }
-
-
-}
+-----BEGIN RSA PRIVATE KEY-----
+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
+-----END RSA PRIVATE KEY-----
